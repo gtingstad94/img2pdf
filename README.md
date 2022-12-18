@@ -19,6 +19,8 @@ The program does a few operations to optimize the output PDF.
 
 Troubleshooting:
 
+YOUR FOLDER STRUCTURE MUST BE CORRECT. Your parent folder should contain only child folders (one for each comic), and each child folder should contain only images. There are controls to deal with non-image objects in the child folders, but it may be a source of error. Try to avoid having any zipped folders or nested child folders (a child folder within a child folder) as this will prevent the convert from working with that comic.
+
 img2pdf has been through lots of rounds of iteration and improvements. To date, I have used it to process hundreds of folders and hundreds of thousands of images. It's at a point now where it almost never fails, but odd characters in folder names or very strange image files may cause the program to crash. If you encounter this, try renaming your folders with standard ASCII characters, or converting your image files to a standard format like PNG or JPEG.
 
 IF img2pdf CRASHES -> The program will terminate right away if you have run it by double clicking the img2pdf.exe file. If you would like to examine the error message that caused the program to crash, try running img2pdf.exe from the Windows command like instead. 
