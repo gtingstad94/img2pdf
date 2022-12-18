@@ -4,14 +4,14 @@ Let's say, for example, you have a full collection of printed pokemon manga, and
 
 2. You run the program (img2pdf.exe in the img2pdf folder) and it asks you to enter the path of a directory. This is the directory that contains your folders of scanned pokemon comic pages! Let's say you just call the root directory "Pokemon". To get the path, navigate to this directory in windows, open it, and you should be able to copy the path from the path bar just next to the search bar. Paste this path in the program and hit enter.
 
-3. The program then asks you to enter a compression value. If you wish to reduce the resolution of your images a little to save space, you can enter some value between 0 and 100. 85 is strongly recommended if you want compression. If you want to preserve the resolution as much as possible, just press 100 and hit enter.
+3. The program then asks you to enter a compression value. If you wish to reduce the resolution of your images a little to save space, you can enter some value between 0 and 100. 85 is strongly recommended if you want compression. If you want to preserve the resolution as much as possible, just type 100 and hit enter.
 
-4. The program will then create a new folder in the Pokemon directory called 'pdf_files', loop through every folder in the Pokemon directory, and create a PDF from the stored images in each directory! Each PDF file will be named after the parent folder for each set of images. That's it! It's super easy.
+4. The program will then create a new folder in the Pokemon directory called 'pdf_files', loop through every folder in the Pokemon directory, create a PDF from the stored images in each directory, and save each pdf in the pdf_files folder! Each PDF file will be named after the parent folder for each set of images. That's it! It's super easy.
 
 Some notes:
 The program does a few operations to optimize the output PDF. 
 
-1. Firstly, most images will be natively color images, even if they don't look like it. img2pdf does a calculation to see if each image could appropriately be converter to greyscale format, and will do the conversion if so. This saves a bit of space. 
+1. Firstly, most images will be natively color images, even if they don't look like it. img2pdf does a calculation to see if each image could appropriately be converted to greyscale format, and will do the conversion if so. This saves a bit of space. 
 
 2. For each image, if the height is larger than 2000 pixels, the image will be rescaled so that it's 2000 pixels tall. This ends up saving lots of space in cases where RAW images are unnecessarily large.
 
