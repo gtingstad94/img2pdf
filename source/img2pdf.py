@@ -14,9 +14,9 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
 import glob
 import os
 import sys
-from googletrans import Translator, constants
+#from googletrans import Translator, constants
 from pprint import pprint
-from django.utils.text import slugify
+#from django.utils.text import slugify
 
 def imgdir2pdf(given_path, compression):
   fse = sys.getfilesystemencoding()
@@ -43,6 +43,8 @@ def imgdir2pdf(given_path, compression):
       folder = newpath
       pdf_name = os.path.join(pdf_path, name + '.pdf')
 
+    #This was used to rename folders with illegal characters.
+    #Since replacing square brackets, it appears that it's no longer required.
     '''if not glob.glob(os.path.join(folder,'*')):
       translator = Translator()
       translation = translator.translate(name)
