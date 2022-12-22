@@ -73,10 +73,10 @@ def imgdir2pdf(given_path, compression):
         if len(np_img.shape) == 3:
           wd = int(img.size[0]/2)
           ht = int(img.size[1]/2)
-          total_dif = np.sum(np.abs(np_img[wd-125:wd+125,ht-125:ht+125,0]-np_img[wd-125:wd+125,ht-125:ht+125,1]) \
-                           + np.abs(np_img[wd-125:wd+125,ht-125:ht+125,0]-np_img[wd-125:wd+125,ht-125:ht+125,2]) \
-                           + np.abs(np_img[wd-125:wd+125,ht-125:ht+125,1]-np_img[wd-125:wd+125,ht-125:ht+125,2]))
-          if total_dif < 5000:
+          total_dif = np.sum(np.abs(np_img[ht-125:ht+125,wd-125:wd+125,0]-np_img[ht-125:ht+125,wd-125:wd+125,1]) \
+                           + np.abs(np_img[ht-125:ht+125,wd-125:wd+125,0]-np_img[ht-125:ht+125,wd-125:wd+125,2]) \
+                           + np.abs(np_img[ht-125:ht+125,wd-125:wd+125,1]-np_img[ht-125:ht+125,wd-125:wd+125,2]))
+          if total_dif < 200:
               img = img.convert('L')
           else:
               img = img.convert('RGB')
