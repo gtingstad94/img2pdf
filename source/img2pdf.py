@@ -62,7 +62,8 @@ def imgdir2pdf(given_path, compression):
     img_dir = os.path.join(folder,'*')
     legal_files = ['.jpg', '.jpeg', '.jfif', '.pjpeg', '.pjp', '.png', '.avif']
     print(name)
-    img_files = glob.glob(u'{}'.format(img_dir))
+    
+    img_files = sorted(glob.glob(u'{}'.format(img_dir)), key=len)
     for img_file in img_files:
       if any(x in img_file for x in legal_files):
         img = Image.open(img_file)
