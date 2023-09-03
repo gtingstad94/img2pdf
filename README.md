@@ -29,5 +29,3 @@ IF img2pdf CRASHES -> The program will terminate right away if you have run it b
 For those of you who don't run command line programs often, if you click in the terminal while the program is running, it may pause the program. If the program seems frozen, try hitting enter in the terminal and waiting a bit, and progress should resume.
 
 img2pdf was written in Python and packaged with PyInstaller, if that matters to anyone.
-
-img2pdf was written for use with Windows' operating system. I do not know if it will work on other OS *Linux/Mac'
